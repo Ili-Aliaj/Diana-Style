@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import ImageCarousel from "./ImageCarousel.jsx";
+import ImageCarousel from "./ImageCarousel1.jsx";
 import ProductCards from "./ProductCards.jsx";
 
 function Header() {

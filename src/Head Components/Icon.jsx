@@ -1,15 +1,17 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import Logo from '../../src/assets/logo-modified.jpg';
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 function Icon(){
 
     return(
-        <div>
+        <HelmetProvider>
+            <div>
             <Helmet>
                 <link rel="icon" type="image/png" href={Logo} />
             </Helmet>
         </div>
+        </HelmetProvider>
     )
 
 }
