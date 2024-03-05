@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import fustanDitelindje from "../assets/photo2.jpeg";
-import ImageCarousel from "./ImageCarousel1.jsx";
+import ImageCarousel from "./ImageCarousel.jsx";
 import ProductCards from "./ProductCards.jsx";
 import "boxicons";
 
