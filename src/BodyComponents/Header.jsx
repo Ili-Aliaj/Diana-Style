@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import ImageCarousel from "./ImageCarousel.jsx";
 import ProductCards from "./ProductCards.jsx";
-import "boxicons";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,12 +33,12 @@ function Header() {
         top: 855,
         behavior: "smooth",
       });
-    } else if (targetElement.id === "produktet-tona"){
+    } else if (targetElement.id === "produktet-tona") {
       window.scrollTo({
         top: 1455,
         behavior: "smooth",
       });
-    } else if (targetElement.id === "na-kontakto"){
+    } else if (targetElement.id === "na-kontakto") {
       window.scrollTo({
         top: 2555,
         behavior: "smooth",
@@ -103,16 +102,7 @@ function Header() {
         <section id="kreu" className="kreu-section-container">
           <div className="kreu-container">
             <div className="kreu-section-content">
-              <h2 className="kreu-section-title">
-                Diana Style | Atelie
-                <box-icon
-                  name="heart"
-                  size="md"
-                  animation="tada"
-                  color="fuchsia"
-                  type="solid"
-                ></box-icon>
-              </h2>
+              <h2 className="kreu-section-title">Diana Style | Atelie</h2>
               <div className="kreu-section-text">
                 <p>
                   Mirësevini në atelien tonë të Fustaneve, një qendër kreative
@@ -269,9 +259,7 @@ function Header() {
                 <a href="https://www.instagram.com/diana_aliaj_style/">
                   Instagram
                 </a>
-                <a href="https://www.facebook.com/aliajdiana/">
-                  Facebook
-                </a>
+                <a href="https://www.facebook.com/aliajdiana/">Facebook</a>
               </div>
             </div>
           </div>
