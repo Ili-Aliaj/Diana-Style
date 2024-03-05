@@ -1,12 +1,12 @@
 import Slider from "react-slick";
 const images = [
-  "./assets/photo1.jpeg",
-  "./assets/photo6.jpeg",
-  "./assets/photo4.jpeg",
-  "./assets/photo5.jpeg",
-  "./assets/photo7.jpeg",
-  "./assets/review1.jpeg",
-  "./assets/review2.jpeg"
+  "../assets/photo1.jpg",
+  "../assets/photo6.jpg",
+  "../assets/photo4.jpg",
+  "../assets/photo5.jpg",
+  "../assets/photo7.jpg",
+  "../assets/review1.jpg",
+  "../assets/review2.jpg"
 ];
 
 export default function ImageCarousel() {
