@@ -39,7 +39,7 @@ h5 {
 }
 
 html {
-  font-size: 100%;
+  font-size: 105%;
 } /* 16px */
 
 h1 {
@@ -417,13 +417,21 @@ box-icon{
   .product-desc {
     font-size: 0.8rem; /* Adjust font size for product description on smaller screens */
   }
+
+  h1 { 
+    font-size: 3rem;  /* Reduce heading sizes */
+  }
+
+  .nav-links {
+    width: 80%;  /* Adjust dropdown width */
+  }
+
+  .grid-images {
+    grid-template-columns: 1fr;  /* Single-column layout */
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .grid-images {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust column size for smaller screens */
-    gap: 10px; /* Reduce gap between grid items */
-  }
 
   .product-card {
     padding: 8px; /* Adjust padding for smaller screens */
@@ -435,5 +443,17 @@ box-icon{
 
   .product-desc {
     font-size: 0.9rem; /* Adjust font size for product description on smaller screens */
+  }
+  body { 
+    font-size: 15px; /* Slightly larger base font size */
+  }
+
+  .kreu-section-content {
+    margin-top: 10%; /* Reduce margin for smaller screens */
+  }
+
+  /* Product Grid */
+  .grid-images {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
   }
 }

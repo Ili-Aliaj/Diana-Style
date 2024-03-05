@@ -3,6 +3,18 @@ import { useState } from "react";
 import { useEffect } from "react";
 import ImageCarousel from "./ImageCarousel1.jsx";
 import ProductCards from "./ProductCards.jsx";
+import photo1 from '../assets/photo1.jpg';
+import photo2 from '../assets/photo6.jpg'
+import photo3 from '../assets/photo4.jpg'
+import photo4 from '../assets/photo5.jpg'
+import photo5 from '../assets/photo7.jpg'
+import photo6 from '../assets/photo2.jpg'
+import productPhoto1 from '../assets/product1.jpg'
+import productPhoto2 from '../assets/product2.jpg'
+import productPhoto3 from '../assets/product3.jpg'
+import productPhoto4 from '../assets/product4.jpg'
+import productPhoto5 from '../assets/product5.jpg'
+import productPhoto6 from '../assets/product6.jpg'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,22 +59,21 @@ function Header() {
   };
 
   const images = [
-    "src/assets/photo1.jpeg",
-    "src/assets/photo2.jpeg",
-    "src/assets/photo4.jpeg",
-    "src/assets/photo5.jpeg",
-    "src/assets/photo6.jpeg",
-    "src/assets/photo7.jpeg",
+    photo1,
+    photo6,
+    photo3,
+    photo4,
+    photo2,
+    photo5,
   ];
 
   const productImage = [
-    "src/assets/product1.jpeg",
-    "src/assets/product2.jpeg",
-    "src/assets/product3.jpeg",
-    "src/assets/product4.jpeg",
-    "src/assets/product5.jpeg",
-    "src/assets/product6.jpeg",
-    "src/assets/product7.jpeg",
+    productPhoto1,
+    productPhoto2,
+    productPhoto3,
+    productPhoto4,
+    productPhoto5,
+    productPhoto6,
   ];
 
   return (
