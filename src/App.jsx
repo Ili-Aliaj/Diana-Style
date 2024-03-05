@@ -5,11 +5,11 @@ function App() {
   
 
   return (
-    <>
+    <div>
     <Icon/>
     <HomePageTitle/>
     <Header/>
-    </>
+    </div>
   )
 }
 

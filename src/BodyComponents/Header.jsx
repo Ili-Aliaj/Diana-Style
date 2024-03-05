@@ -249,12 +249,12 @@ function Header() {
       </div>
       <br />
       <div className="na-kontakto-div-section">
-        <section id="na-kontakto" class="contact-section">
-          <div class="contact-container">
+        <section id="na-kontakto" className="contact-section">
+          <div className="contact-container">
             <h2>Diana Style</h2>
             <div className="contact-info">
               <p>Contact Information:</p>
-              <div class="contact-links">
+              <div className="contact-links">
                 <a href="mailto:aliajdiana@gmail.com">Email</a>
                 <a href="https://www.instagram.com/diana_aliaj_style/">
                   Instagram
