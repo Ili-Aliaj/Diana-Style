@@ -367,10 +367,6 @@ small {
     width: 50%;
   }
 }
-box-icon{
-  vertical-align: middle;
-}
-
 /* Media queries for phones with max-width 480px */
 @media screen and (max-width: 480px) {
   .title {
@@ -399,10 +395,6 @@ box-icon{
   .nav-links.open {
     display: block; /* Show navigation links when menu is open */
     width: 30%;
-  }
-
-  .kreu-navlink-open{
-    padding-right: 100%;
   }
 
   .grid-images {
