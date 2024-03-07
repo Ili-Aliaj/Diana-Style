@@ -86,8 +86,8 @@ function Header() {
           </button>
           <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
             <li>
-              <a onClick={handleClick} href="kreu">
-                Kreu
+              <a className="kreu-navlink-open" onClick={handleClick} href="kreu">
+                Kreu      
               </a>
             </li>
             <li>

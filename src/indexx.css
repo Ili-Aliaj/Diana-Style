@@ -113,7 +113,7 @@ small {
 
 .nav-links li {
   margin-left: auto;
-  padding: 4px 8px;
+  padding: 3% 6%;
   font-size: 1.1rem;
 }
 
@@ -126,7 +126,7 @@ small {
   border-radius: 0.25rem;
   cursor: pointer;
   width: fit-content;
-  padding: 4px 8px;
+  padding: 3% 6%;
 }
 
 .kreu-container {
@@ -398,7 +398,11 @@ box-icon{
 
   .nav-links.open {
     display: block; /* Show navigation links when menu is open */
-    width: 100%;
+    width: 30%;
+  }
+
+  .kreu-navlink-open{
+    padding-right: 100%;
   }
 
   .grid-images {
