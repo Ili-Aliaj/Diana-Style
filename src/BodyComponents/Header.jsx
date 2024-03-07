@@ -3,18 +3,18 @@ import { useState } from "react";
 import { useEffect } from "react";
 import ImageCarousel from "./ImageCarousel1.jsx";
 import ProductCards from "./ProductCards.jsx";
-import photo1 from '../assets/photo1.jpg';
-import photo2 from '../assets/photo6.jpg'
-import photo3 from '../assets/photo4.jpg'
-import photo4 from '../assets/photo5.jpg'
-import photo5 from '../assets/photo7.jpg'
-import photo6 from '../assets/photo2.jpg'
-import productPhoto1 from '../assets/product1.jpg'
-import productPhoto2 from '../assets/product2.jpg'
-import productPhoto3 from '../assets/product3.jpg'
-import productPhoto4 from '../assets/product4.jpg'
-import productPhoto5 from '../assets/product5.jpg'
-import productPhoto6 from '../assets/product6.jpg'
+import photo1 from '/src/assets/photo1.jpg';
+import photo2 from '/src/assets/photo6.jpg'
+import photo3 from '/src/assets/photo4.jpg'
+import photo4 from '/src/assets/photo5.jpg'
+import photo5 from '/src/assets/photo7.jpg'
+import photo6 from '/src/assets/photo2.jpg'
+import productPhoto1 from '/src/assets/product1.jpg'
+import productPhoto2 from '/src/assets/product2.jpg'
+import productPhoto3 from '/src/assets/product3.jpg'
+import productPhoto4 from '/src/assets/product4.jpg'
+import productPhoto5 from '/src/assets/product5.jpg'
+import productPhoto6 from '/src/assets/product6.jpg'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
