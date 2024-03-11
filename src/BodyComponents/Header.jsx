@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import "boxicons";
+import { instagram } from 'boxicons'
 import ImageCarousel from "./ImageCarousel1.jsx";
 import ProductCards from "./ProductCards.jsx";
 import photo1 from "/src/assets/photo1.jpg";
