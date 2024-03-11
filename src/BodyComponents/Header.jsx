@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { instagram } from 'boxicons'
+import  'boxicons'
 import ImageCarousel from "./ImageCarousel1.jsx";
 import ProductCards from "./ProductCards.jsx";
 import photo1 from "/src/assets/photo1.jpg";
@@ -443,15 +443,15 @@ function Header() {
       <div className="na-kontakto-div-section">
         <section id="na-kontakto" className="contact-section">
           <div className="contact-container">
-            <h2>Diana Style</h2>
+            <h2 className="title">Diana Style</h2>
             <div className="contact-info">
               <p>Contact Information:</p>
               <div className="contact-links">
-                <a href="mailto:aliajdiana@gmail.com">Email</a>
-                <a href="https://www.instagram.com/diana_aliaj_style/">
+                <a className="mail-contact" href="mailto:aliajdiana@gmail.com">Email</a>
+                <a className="ig-contact" href="https://www.instagram.com/diana_aliaj_style/">
                   Instagram
                 </a>
-                <a href="https://www.facebook.com/aliajdiana/">Facebook</a>
+                <a className="fb-contact" href="https://www.facebook.com/aliajdiana/">Facebook</a>
               </div>
             </div>
           </div>
