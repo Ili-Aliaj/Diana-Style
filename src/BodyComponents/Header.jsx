@@ -97,23 +97,23 @@ function Header() {
                 aria-labelledby="dropdownDefaultButton"
               >
                 <li>
-                  <a href="#" className="dropdown-item">
-                    Dashboard
+                  <a href="#kreu-div-section" className="dropdown-item">
+                    Kreu
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="dropdown-item">
-                    Settings
+                  <a href="#rreth-nesh-div-section" className="dropdown-item">
+                    Rreth Nesh
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="dropdown-item">
-                    Earnings
+                  <a href="#produktet-tona-div-section" className="dropdown-item">
+                    Produktet
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="dropdown-item">
-                    Sign out
+                  <a href="#na-kontaktoni" className="dropdown-item">
+                    Na Kontakoni
                   </a>
                 </li>
               </ul>
@@ -122,7 +122,7 @@ function Header() {
         </nav>
       </header>
 
-      <div className="kreu-div-section">
+      <div id="kreu-div-section">
         <section id="kreu" className="kreu-section-container">
           <div className="kreu-container">
             <div className="kreu-section-content">
@@ -147,7 +147,7 @@ function Header() {
       </div>
 
       <br />
-      <div className="rreth-nesh-div-section">
+      <div id="rreth-nesh-div-section">
         <section id="rreth-nesh">
           <div className="rrethnesh-container">
             <div className="rrethnesh-section-content">
@@ -181,7 +181,7 @@ function Header() {
         </section>
       </div>
       <br />
-      <div className="produktet-tona-div-section">
+      <div id="produktet-tona-div-section">
         <section id="produktet-tona">
           <div className="produktet-tona-container">
             <div className="produktet-tona-contents">

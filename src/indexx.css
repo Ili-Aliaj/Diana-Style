@@ -21,13 +21,8 @@ body {
   animation-fill-mode: forwards;
 }
 
-@keyframes fadeInAnimation {
-  0% {
-      opacity: 0.2;
-  }
-  100% {
-      opacity: 1;
-  }
+html{
+  scroll-behavior: smooth;
 }
 
 h1,
