@@ -1,28 +1,23 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import "boxicons";
 import ImageCarousel from "./ImageCarousel1.jsx";
 import ProductCards from "./ProductCards.jsx";
-import photo1 from '/src/assets/photo1.jpg';
-import photo2 from '/src/assets/photo6.jpg'
-import photo3 from '/src/assets/photo4.jpg'
-import photo4 from '/src/assets/photo5.jpg'
-import photo5 from '/src/assets/photo7.jpg'
-import photo6 from '/src/assets/photo2.jpg'
-import productPhoto1 from '/src/assets/product1.jpg'
-import productPhoto2 from '/src/assets/product2.jpg'
-import productPhoto3 from '/src/assets/product3.jpg'
-import productPhoto4 from '/src/assets/product4.jpg'
-import productPhoto5 from '/src/assets/product5.jpg'
-import productPhoto6 from '/src/assets/product6.jpg'
+import photo1 from "/src/assets/photo1.jpg";
+import photo2 from "/src/assets/photo6.jpg";
+import photo3 from "/src/assets/photo4.jpg";
+import photo4 from "/src/assets/photo5.jpg";
+import photo5 from "/src/assets/photo7.jpg";
+import photo6 from "/src/assets/photo2.jpg";
+import productPhoto1 from "/src/assets/product1.jpg";
+import productPhoto2 from "/src/assets/product2.jpg";
+import productPhoto3 from "/src/assets/product3.jpg";
+import productPhoto4 from "/src/assets/product4.jpg";
+import productPhoto5 from "/src/assets/product5.jpg";
+import productPhoto6 from "/src/assets/product6.jpg";
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   useEffect(() => {
     const pageTitle = document.querySelector(".title");
     pageTitle.addEventListener("click", () => {
@@ -30,42 +25,30 @@ function Header() {
     });
   }, []);
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    const targetId = e.currentTarget.getAttribute("href");
-    const targetElement = document.getElementById(targetId);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [afterClicked, setAfterClicked] = useState(false);
 
-    if (targetElement.id === "kreu") {
-      window.scrollTo({
-        top: 3,
-        behavior: "smooth",
-      });
-    } else if (targetElement.id === "rreth-nesh") {
-      window.scrollTo({
-        top: 855,
-        behavior: "smooth",
-      });
-    } else if (targetElement.id === "produktet-tona") {
-      window.scrollTo({
-        top: 1455,
-        behavior: "smooth",
-      });
-    } else if (targetElement.id === "na-kontakto") {
-      window.scrollTo({
-        top: 2555,
-        behavior: "smooth",
-      });
-    }
+  const handleButtonClick = () => {
+    setShowDropdown(!showDropdown);
+    setAfterClicked(true);
   };
 
-  const images = [
-    photo1,
-    photo6,
-    photo3,
-    photo4,
-    photo2,
-    photo5,
-  ];
+  useEffect(() => {
+    const handleWindowClick = (event) => {
+      if (!event.target.matches("#dropdownDefaultButton")) {
+        setShowDropdown(false);
+        setAfterClicked(false);
+      }
+    };
+
+    window.addEventListener("click", handleWindowClick);
+
+    return () => {
+      window.removeEventListener("click", handleWindowClick);
+    };
+  }, []);
+
+  const images = [photo1, photo6, photo3, photo4, photo2, photo5];
 
   const productImage = [
     productPhoto1,
@@ -81,26 +64,61 @@ function Header() {
       <header>
         <nav className="navbar">
           <h2 className="title">Diana Style</h2>
-          <button className="hamburger-btn" onClick={toggleMenu}>
-            ☰
-          </button>
-          <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
-            <li>
-              <a onClick={handleClick} href="rreth-nesh">
-                Rreth Nesh
-              </a>
-            </li>
-            <li>
-              <a onClick={handleClick} href="produktet-tona">
-                Produktet Tona
-              </a>
-            </li>
-            <li>
-              <a onClick={handleClick} href="na-kontakto">
-                Na Kontakto
-              </a>
-            </li>
-          </ul>
+          <div className="dropdown-container">
+            <button
+              id="dropdownDefaultButton"
+              className="dropdown-button"
+              type="button"
+              onClick={handleButtonClick}
+            >
+              ☰
+              <svg
+                className="dropdown-icon"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </button>
+            <div
+              id="dropdown"
+              className={`dropdown-content ${afterClicked ? "after-clicked" : ""}`}
+            >
+              <ul
+                className="dropdown-list"
+                aria-labelledby="dropdownDefaultButton"
+              >
+                <li>
+                  <a href="#" className="dropdown-item">
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="dropdown-item">
+                    Settings
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="dropdown-item">
+                    Earnings
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="dropdown-item">
+                    Sign out
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </header>
 
@@ -114,16 +132,10 @@ function Header() {
                   Mirësevini në atelien tonë të Fustaneve, një qendër kreative
                   ku çdo veshje është një shprehje unike e stilit dhe shijeve
                   tuaja personale. Ne specializohemi në krijimin e fustaneve të
-                  personalizuara, duke ofruar mundësi për porosi, qira dhe
-                  blerje. Me një pasion të thellë për dizajnin dhe një angazhim
-                  të palëkundur ndaj cilësisë, ne punojmë me kujdes të veçantë
-                  për të siguruar që secili veshje të përmbushë standardet më të
-                  larta të bukurisë dhe elegancës. Në atelien tonë, ne ofrojmë
-                  një gamë të gjerë të stilimeve për të përmbushur nevojat e çdo
-                  klienti, duke përfshirë propozime të veçanta për femijë dhe të
-                  rritur. Çdo fustan që krijohet këtu është një pjesë unike e
-                  artit të veshjes, e krijuar me përkushtim dhe detaje që i
-                  japin personalitet dhe shkëlqim të veçantë.
+                  personalizuara, duke ofruar mundësi për porosi, qera dhe
+                  blerje.Ne punojmë me kujdes të veçantë për të siguruar që cdo
+                  veshje të përmbushë standardet më të larta të bukurisë dhe
+                  elegancës.
                 </p>
               </div>
               <div className="section-image">
@@ -143,24 +155,22 @@ function Header() {
               <p>
                 Me një përvojë të gjatë në fushën e modës që fillon që në vitin
                 1995, ne, në Diana Style, kemi kultivuar pasionin tonë për
-                dizajnin dhe shkëlqimin në çdo detaj të veshjes. Me një vizion
-                të qartë për të ofruar fustane unike dhe të personalizuara,
-                biznesi ynë u hap zyrtarisht në vitin 2010, duke filluar një
+                dizajnin dhe shkëlqimin në çdo detaj të veshjes.
+                Biznesi ynë u hap zyrtarisht në vitin 2010, duke filluar një
                 udhëtim të vështirë dhe mbushur me sfida, por gjithashtu me
                 sukses të madh.
               </p>
               <p>
-                Ne kemi angazhuar ekspertizën tonë në çdo hap të rrugës, duke
-                krijuar një ambient të veçantë në të cilin klientët tanë mund të
-                ndihen të mrekulluar. Me një kombinim të përvojës së hershme dhe
+                Ne kemi angazhuar ekspertizën tonë në çdo hap të rrugës. 
+                Me një kombinim të përvojës së hershme dhe
                 vizionit të rinovuar, ne vazhdojmë të ofrojmë fustane të
-                personalizuara, përmbushur me dashuri dhe kujdes për detajet,
+                personalizuara, mbushur me dashuri dhe kujdes për detajet,
                 për të siguruar një përvojë të jashtëzakonshme të veshjes për
                 klientët tanë.
               </p>
               <p>
                 Këtu në Diana Style, ne jemi të përkushtuar për të përfaqësuar
-                bukurinë dhe elegancën në çdo kënd të kriacioneve tona, duke u
+                bukurinë dhe elegancën në çdo kënd, duke i
                 dhënë një shkëlqim të veçantë çdo fustani. Nëpërmjet vizionit
                 tonë dhe pasionit për të krijuar veshje të mrekullueshme, ne
                 synojmë të bëhemi një destinacion i preferuar për të gjithë ata
@@ -186,65 +196,241 @@ function Header() {
               <div className="grid-images">
                 <ProductCards
                   porositTani={
-                    <a href="https://www.instagram.com/direct/t/115349376528036">
-                      Porosit tani
-                    </a>
+                    <div>
+                      <a
+                        className="instagram-link"
+                        href="https://www.instagram.com/diana_aliaj_style/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="instagram"
+                        ></box-icon>
+                      </a>
+                      <br />
+                      <a
+                        className="facebook-link"
+                        href="https://www.facebook.com/aliajdiana/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="facebook"
+                        ></box-icon>
+                      </a>
+                    </div>
                   }
                   imageSrc={images[1]}
                 />
                 <ProductCards
                   porositTani={
-                    <a href="https://www.instagram.com/direct/t/115349376528036">
-                      Porosit tani
-                    </a>
+                    <div>
+                      <a
+                        className="instagram-link"
+                        href="https://www.instagram.com/diana_aliaj_style/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="instagram"
+                        ></box-icon>
+                      </a>
+                      <br />
+                      <a
+                        className="facebook-link"
+                        href="https://www.facebook.com/aliajdiana/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="facebook"
+                        ></box-icon>
+                      </a>
+                    </div>
                   }
                   imageSrc={images[2]}
                 />
                 <ProductCards
                   porositTani={
-                    <a href="https://www.instagram.com/direct/t/115349376528036">
+                    <div>
+                    <a
+                      className="instagram-link"
+                      href="https://www.instagram.com/diana_aliaj_style/"
+                    >
                       Porosit tani
+                      <box-icon
+                        className="boxicon"
+                        type="logo"
+                        name="instagram"
+                      ></box-icon>
                     </a>
+                    <br />
+                    <a
+                      className="facebook-link"
+                      href="https://www.facebook.com/aliajdiana/"
+                    >
+                      Porosit tani
+                      <box-icon
+                        className="boxicon"
+                        type="logo"
+                        name="facebook"
+                      ></box-icon>
+                    </a>
+                  </div>
                   }
                   imageSrc={productImage[0]}
                 />
                 <ProductCards
                   porositTani={
-                    <a href="https://www.instagram.com/direct/t/115349376528036">
-                      Porosit tani
-                    </a>
+                    <div>
+                      <a
+                        className="instagram-link"
+                        href="https://www.instagram.com/diana_aliaj_style/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="instagram"
+                        ></box-icon>
+                      </a>
+                      <br />
+                      <a
+                        className="facebook-link"
+                        href="https://www.facebook.com/aliajdiana/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="facebook"
+                        ></box-icon>
+                      </a>
+                    </div>
                   }
                   imageSrc={productImage[1]}
                 />
                 <ProductCards
                   porositTani={
-                    <a href="https://www.instagram.com/direct/t/115349376528036">
-                      Porosit tani
-                    </a>
+                    <div>
+                      <a
+                        className="instagram-link"
+                        href="https://www.instagram.com/diana_aliaj_style/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="instagram"
+                        ></box-icon>
+                      </a>
+                      <br />
+                      <a
+                        className="facebook-link"
+                        href="https://www.facebook.com/aliajdiana/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="facebook"
+                        ></box-icon>
+                      </a>
+                    </div>
                   }
                   imageSrc={productImage[2]}
                 />
                 <ProductCards
                   porositTani={
-                    <a href="https://www.instagram.com/direct/t/115349376528036">
-                      Porosit tani
-                    </a>
+                    <div>
+                      <a
+                        className="instagram-link"
+                        href="https://www.instagram.com/diana_aliaj_style/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="instagram"
+                        ></box-icon>
+                      </a>
+                      <br />
+                      <a
+                        className="facebook-link"
+                        href="https://www.facebook.com/aliajdiana/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="facebook"
+                        ></box-icon>
+                      </a>
+                    </div>
                   }
                   imageSrc={productImage[3]}
                 />
                 <ProductCards
                   porositTani={
-                    <a href="https://www.instagram.com/direct/t/115349376528036">
+                    <div>
+                    <a
+                      className="instagram-link"
+                      href="https://www.instagram.com/diana_aliaj_style/"
+                    >
                       Porosit tani
+                      <box-icon
+                        className="boxicon"
+                        type="logo"
+                        name="instagram"
+                      ></box-icon>
                     </a>
+                    <br />
+                    <a
+                      className="facebook-link"
+                      href="https://www.facebook.com/aliajdiana/"
+                    >
+                      Porosit tani
+                      <box-icon
+                        className="boxicon"
+                        type="logo"
+                        name="facebook"
+                      ></box-icon>
+                    </a>
+                  </div>
                   }
                   imageSrc={productImage[4]}
                 />
                 <ProductCards
                   porositTani={
-                    <a href="https://www.instagram.com/direct/t/115349376528036">
-                      Porosit tani
-                    </a>
+                    <div>
+                      <a
+                        className="instagram-link"
+                        href="https://www.instagram.com/diana_aliaj_style/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="instagram"
+                        ></box-icon>
+                      </a>
+                      <br />
+                      <a
+                        className="facebook-link"
+                        href="https://www.facebook.com/aliajdiana/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="facebook"
+                        ></box-icon>
+                      </a>
+                    </div>
                   }
                   imageSrc={productImage[5]}
                 />

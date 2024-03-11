@@ -1,11 +1,12 @@
+
 @import url("https://fonts.googleapis.com/css?family=Quattrocento:700|Quattrocento%20Sans:400");
 
 :root {
   --text: #040316;
   --background: #eaeaea;
-  --primary: #ff00e1;
-  --secondary: #b926e1;
-  --accent: #ff3de8;
+  --primary: #ff39e8;
+  --secondary: #c135e7;
+  --accent: #ff68ed;
 }
 
 body {
@@ -95,40 +96,65 @@ small {
   margin-right: auto;
 }
 
-.hamburger-btn {
-  background: none;
+.dropdown-container{
+  position: relative;
+}
+
+.dropdown-button {
+  color: white;
+  background-color: var(--secondary);
+  padding: 6px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
   border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
+}
+
+.dropdown-button:hover {
+  background-color: var(--accent);
+}
+
+.dropdown-icon {
+  width: 10px;
+  height: 6px;
   margin-left: 5px;
-  background-color: var(--accent);
-  border-radius: 0.3rem;
-  display: none; /* Hidden on larger screens */
 }
 
-.nav-links {
+.dropdown-content{
+  position: absolute;
+  top: calc(100% + 4px);
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+.dropdown-content.after-clicked{
+  display: block;
+}
+
+.dropdown-list {
+  padding: 0;
+  margin: 0;
   list-style: none;
-  display: flex;
 }
 
-.nav-links li {
-  margin-left: auto;
-  padding: 3% 6%;
-  font-size: 1.1rem;
+.dropdown-list li {
+  margin-top: 3px;
+  margin-bottom: 2px;
 }
 
-.nav-links a {
+.dropdown-item {
+  display: block;
+  padding: 8px 16px;
+  color: #4a5568;
   text-decoration: none;
-  color: black;
-}
-.nav-links li:hover {
-  background-color: var(--accent);
-  border-radius: 0.25rem;
-  cursor: pointer;
-  width: fit-content;
-  padding: 3% 6%;
 }
 
+.dropdown-item:hover {
+  background-color: #f7fafc;
+  color: #2d3748;
+}
 .kreu-container {
   width: 90%;
   margin: 0 auto;
@@ -203,8 +229,6 @@ small {
 
 .produktet-tona-container{
   width: 100%;
-  margin: 0 auto;
-  margin-bottom: 2%;
 }
 
 .produktet-tona-contents{
@@ -246,17 +270,13 @@ small {
 
 .grid-images a{
   text-decoration: none;
-  border: 1px solid var(--accent);
   border-radius: 0.4rem;
-  background-color: var(--primary);
   color: var(--text);
   padding: 2%;
   transition: ease-in 0.4s;
 }
 
-.grid-images a:hover{
-  background-color: #fa29e1;
-}
+
 .na-kontakto-div-section{
   margin: 0;
   padding: 0;
@@ -298,11 +318,6 @@ small {
   border-radius: 20px;
   margin: 0 10px;
   transition: background-color 0.3s ease;
-}
-
-.contact-links a:hover {
-  background-color: var(--primary);
-  color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -347,25 +362,6 @@ small {
 /* Responsive Behavior */
 @media (max-width: 725px) {
   /* Adjust breakpoint as needed */
-  .hamburger-btn {
-    display: flex; /* Changed from block */
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%; 
-    background-color: #f0f0f0;
-    padding-right: 1px;
-    display: none; /* Initially hidden */
-    position: sticky; /* Changed from absolute */
-    top: auto; /* Removed */
-    left: auto; /* Removed */
-  }
-
-  .nav-links.open {
-    display: block;
-    width: 50%;
-  }
 }
 /* Media queries for phones with max-width 480px */
 @media screen and (max-width: 480px) {
@@ -375,26 +371,6 @@ small {
 
   .navbar {
     height: 15%; /* Adjust navbar height for smaller screens */
-  }
-
-  .hamburger-btn {
-    display: flex; /* Ensure hamburger button is visible */
-  }
-
-  .nav-links {
-    flex-direction: column; /* Stack navigation links vertically */
-    width: 100%;
-    background-color: #f0f0f0;
-    padding-right: 1px;
-    display: none; /* Initially hidden */
-    position: sticky; /* Stick to the top when scrolling */
-    top: auto; /* Remove top position */
-    left: auto; /* Remove left position */
-  }
-
-  .nav-links.open {
-    display: block; /* Show navigation links when menu is open */
-    width: 30%;
   }
 
   .grid-images {
@@ -416,10 +392,6 @@ small {
 
   h1 { 
     font-size: 3rem;  /* Reduce heading sizes */
-  }
-
-  .nav-links {
-    width: 80%;  /* Adjust dropdown width */
   }
 
   .grid-images {
@@ -452,4 +424,85 @@ small {
   .grid-images {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
   }
+}
+
+@media (max-width: 390px) and (max-height: 844px){
+  .navbar{
+    margin-top: 0;
+    max-height: 70px;
+    width: 360px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .contact-section {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Adjust as needed */
+  }
+  
+  .contact-container {
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 90%; 
+    margin: 0;
+  }
+  
+  .contact-info {
+    text-align: left; /* Align the contact info to the left */
+    margin-top: 0; /* Add some space between the name and contact info */
+  }
+  
+  .contact-info p {
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  .contact-links {
+    margin-top: 20px; /* Add space between the text and links */
+  }
+  
+  .contact-links a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 8px 20px;
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+
+
+}
+
+.instagram-link {
+  background-color: #fc4bcd;
+  display: inline-flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+  text-decoration: none; /* Remove underline */
+  color: black; /* Text color */
+}
+.instagram-link:hover{
+  background-color: hsl(316, 95%, 71%);
+}
+
+.boxicon {
+  margin-left: 5px; /* Adjust spacing between text and icon */
+  display: inline-block; /* Ensures the box-icon behaves as a block-level element */
+  vertical-align: middle; /* Aligns the box-icon vertically */
+}
+
+.facebook-link {
+  margin-top: 7px;
+  background-color: #1877F2;
+  display: inline-flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+  text-decoration: none; /* Remove underline */
+  color: black; /* Text color */
+}
+.facebook-link:hover{
+  background-color:hsl(214, 97%, 63%);
 }
