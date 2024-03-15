@@ -625,6 +625,17 @@ small {
 
 }
 
+
+@media (max-width: 390px) and (max-height: 844px) {
+  .navbar{
+    width: 358px;
+  }
+
+  .contact-section{
+    margin-top: 45px;
+  }
+}
+
 .instagram-link {
   background-color: #fc4bcd;
   display: inline-flex; /* Use flexbox */
