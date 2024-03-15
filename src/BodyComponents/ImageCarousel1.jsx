@@ -37,7 +37,7 @@ export default function ImageCarousel() {
         <img
           src={images[4]}
           alt="fustan 1}"
-          style={{ width: "40%", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px'}}
+          style={{ width: "220px", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px'}}
         />
       </div>
       <div
@@ -50,7 +50,7 @@ export default function ImageCarousel() {
         <img
           src={images[5]}
           alt="fustan 1}"
-          style={{ width: "40%", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px'}}
+          style={{ width: "220px", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px'}}
         />
       </div>
       <div
@@ -63,7 +63,7 @@ export default function ImageCarousel() {
         <img
           src={images[2]}
           alt="fustan 1}"
-          style={{ width: "40%", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px', }}
+          style={{ width: "220px", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px', }}
         />
       </div>
       <div
@@ -76,7 +76,7 @@ export default function ImageCarousel() {
         <img
           src={images[1]}
           alt="fustan 1}"
-          style={{ width: "40%", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px'}}
+          style={{ width: "220px", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px'}}
         />
       </div>
       <div
@@ -89,7 +89,7 @@ export default function ImageCarousel() {
         <img
           src={images[3]}
           alt="fustan 1}"
-          style={{ width: "40%", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px'}}
+          style={{ width: "220px", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px'}}
         />
       </div>
     </Slider>

@@ -97,22 +97,22 @@ function Header() {
                 aria-labelledby="dropdownDefaultButton"
               >
                 <li>
-                  <a href="#kreu-div-section" className="dropdown-item">
+                  <a href="#kreu" className="dropdown-item">
                     Kreu
                   </a>
                 </li>
                 <li>
-                  <a href="#rreth-nesh-div-section" className="dropdown-item">
+                  <a href="#rreth-nesh" className="dropdown-item">
                     Rreth Nesh
                   </a>
                 </li>
                 <li>
-                  <a href="#produktet-tona-div-section" className="dropdown-item">
+                  <a href="#produktet-tona" className="dropdown-item">
                     Produktet
                   </a>
                 </li>
                 <li>
-                  <a href="#na-kontaktoni" className="dropdown-item">
+                  <a href="#na-kontakto" className="dropdown-item">
                     Na Kontakoni
                   </a>
                 </li>
@@ -122,7 +122,7 @@ function Header() {
         </nav>
       </header>
 
-      <div id="kreu-div-section">
+      <div id="kreu">
         <section id="kreu" className="kreu-section-container">
           <div className="kreu-container">
             <div className="kreu-section-content">
@@ -147,9 +147,7 @@ function Header() {
       </div>
 
       <br />
-      <div id="rreth-nesh-div-section">
         <section id="rreth-nesh">
-          <div className="rrethnesh-container">
             <div className="rrethnesh-section-content">
               <h2>Rreth Nesh</h2>
               <p>
@@ -177,11 +175,9 @@ function Header() {
                 që kërkojnë stilin dhe shkëlqimin në çdo veshje.
               </p>
             </div>
-          </div>
         </section>
-      </div>
       <br />
-      <div id="produktet-tona-div-section">
+      <div id="produktet-tona">
         <section id="produktet-tona">
           <div className="produktet-tona-container">
             <div className="produktet-tona-contents">
@@ -440,7 +436,7 @@ function Header() {
         </section>
       </div>
       <br />
-      <div className="na-kontakto-div-section">
+      <div className="na-kontakto">
         <section id="na-kontakto" className="contact-section">
           <div className="contact-container">
             <h2 className="title">Diana Style</h2>

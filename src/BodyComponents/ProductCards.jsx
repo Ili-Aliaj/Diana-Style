@@ -2,8 +2,8 @@ function ProductCards(props) {
   return (
     <>
       <div className="product-card">
-        <img src={props.imageSrc} alt={props.imgAlt} />
-        <p> {props.porositTani}</p>
+        <img className="product-image" src={props.imageSrc} alt={props.imgAlt} />
+        <span> {props.porositTani}</span>
       </div>
     </>
   );
