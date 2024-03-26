@@ -5,6 +5,7 @@ import photo3 from '../assets/photo4.jpg'
 import photo4 from '../assets/photo5.jpg'
 import photo5 from '../assets/photo7.jpg'
 import photo6 from '../assets/review1.jpg'
+import photo7 from '../assets/image1.png'
 
 
 
@@ -15,6 +16,7 @@ const images = [
   photo4,
   photo5,
   photo6,
+  photo7
 ];
 
 export default function ImageCarousel() {
@@ -35,8 +37,7 @@ export default function ImageCarousel() {
         }}
       >
         <img
-          src={images[4]}
-          alt="fustan 1}"
+          src={images[6]}
           style={{ width: "220px", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px'}}
         />
       </div>
@@ -49,7 +50,6 @@ export default function ImageCarousel() {
       >
         <img
           src={images[5]}
-          alt="fustan 1}"
           style={{ width: "220px", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px'}}
         />
       </div>
@@ -62,7 +62,6 @@ export default function ImageCarousel() {
       >
         <img
           src={images[2]}
-          alt="fustan 1}"
           style={{ width: "220px", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px', }}
         />
       </div>
@@ -75,7 +74,6 @@ export default function ImageCarousel() {
       >
         <img
           src={images[1]}
-          alt="fustan 1}"
           style={{ width: "220px", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px'}}
         />
       </div>
@@ -88,7 +86,6 @@ export default function ImageCarousel() {
       >
         <img
           src={images[3]}
-          alt="fustan 1}"
           style={{ width: "220px", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px'}}
         />
       </div>
