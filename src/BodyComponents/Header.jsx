@@ -25,6 +25,10 @@ import productPhoto11 from "/src/assets/product5.jpeg";
 import productPhoto12 from "/src/assets/product6.jpeg";
 import productPhoto13 from "/src/assets/product7.png";
 import productPhoto14 from "/src/assets/product8.png";
+import productPhoto15 from "/src/assets/product10.jpeg";
+import productPhoto16 from "/src/assets/product11.jpeg";
+import productPhoto17 from "/src/assets/product12.jpeg";
+import questionProduct from "/src/assets/questionProduct.jpg";
 
 
 function Header() {
@@ -75,6 +79,10 @@ function Header() {
     productPhoto12,
     productPhoto13,
     productPhoto14,
+    productPhoto15,
+    productPhoto16,
+    productPhoto17,
+    questionProduct
   ];
 
   return (
@@ -208,6 +216,7 @@ function Header() {
                 <ProductCards
                   porositTani={
                     <div>
+                      <p className="price-tag">11,990L</p>
                       <a
                         className="instagram-link"
                         href="https://www.instagram.com/diana_aliaj_style/"
@@ -238,6 +247,38 @@ function Header() {
                 <ProductCards
                   porositTani={
                     <div>
+                      <p className="price-tag">2,990L</p>
+                      <a
+                        className="instagram-link"
+                        href="https://www.instagram.com/diana_aliaj_style/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="instagram"
+                        ></box-icon>
+                      </a>
+                      <br />
+                      <a
+                        className="facebook-link"
+                        href="https://www.facebook.com/aliajdiana/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="facebook"
+                        ></box-icon>
+                      </a>
+                    </div>
+                  }
+                  imageSrc={productImage[14]}
+                />
+                <ProductCards
+                  porositTani={
+                    <div>
+                      <p className="price-tag">8,990L</p>
                       <a
                         className="instagram-link"
                         href="https://www.instagram.com/diana_aliaj_style/"
@@ -268,6 +309,69 @@ function Header() {
                 <ProductCards
                   porositTani={
                     <div>
+                      <p className="price-tag">7,990L</p>
+                      <a
+                        className="instagram-link"
+                        href="https://www.instagram.com/diana_aliaj_style/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="instagram"
+                        ></box-icon>
+                      </a>
+                      <br />
+                      <a
+                        className="facebook-link"
+                        href="https://www.facebook.com/aliajdiana/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="facebook"
+                        ></box-icon>
+                      </a>
+                    </div>
+                  }
+                  imageSrc={productImage[15]}
+                />
+                <ProductCards
+                  porositTani={
+                    <div>
+                      <p className="price-tag">2,990L</p>
+                      <a
+                        className="instagram-link"
+                        href="https://www.instagram.com/diana_aliaj_style/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="instagram"
+                        ></box-icon>
+                      </a>
+                      <br />
+                      <a
+                        className="facebook-link"
+                        href="https://www.facebook.com/aliajdiana/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="facebook"
+                        ></box-icon>
+                      </a>
+                    </div>
+                  }
+                  imageSrc={productImage[16]}
+                />
+                <ProductCards
+                  porositTani={
+                    <div>
+                      <p className="price-tag">9,990L</p>
                       <a
                         className="instagram-link"
                         href="https://www.instagram.com/diana_aliaj_style/"
@@ -298,6 +402,7 @@ function Header() {
                 <ProductCards
                   porositTani={
                     <div>
+                      <p className="price-tag">9,990L</p>
                     <a
                       className="instagram-link"
                       href="https://www.instagram.com/diana_aliaj_style/"
@@ -328,6 +433,7 @@ function Header() {
                 <ProductCards
                   porositTani={
                     <div>
+                      <p className="price-tag">6,990L</p>
                       <a
                         className="instagram-link"
                         href="https://www.instagram.com/diana_aliaj_style/"
@@ -358,6 +464,7 @@ function Header() {
                 <ProductCards
                   porositTani={
                     <div>
+                      <p className="price-tag">8,990L</p>
                       <a
                         className="instagram-link"
                         href="https://www.instagram.com/diana_aliaj_style/"
@@ -388,6 +495,7 @@ function Header() {
                 <ProductCards
                   porositTani={
                     <div>
+                      <p className="price-tag">2,490L</p>
                       <a
                         className="instagram-link"
                         href="https://www.instagram.com/diana_aliaj_style/"
@@ -418,6 +526,7 @@ function Header() {
                 <ProductCards
                   porositTani={
                     <div>
+                      <p className="price-tag">5,990L</p>
                       <a
                         className="instagram-link"
                         href="https://www.instagram.com/diana_aliaj_style/"
@@ -448,6 +557,7 @@ function Header() {
                 <ProductCards
                   porositTani={
                     <div>
+                      <p className="price-tag">7,990L</p>
                       <a
                         className="instagram-link"
                         href="https://www.instagram.com/diana_aliaj_style/"
@@ -478,6 +588,7 @@ function Header() {
                 <ProductCards
                   porositTani={
                     <div>
+                      <p className="price-tag">8,990L</p>
                       <a
                         className="instagram-link"
                         href="https://www.instagram.com/diana_aliaj_style/"
@@ -503,11 +614,12 @@ function Header() {
                       </a>
                     </div>
                   }
-                  imageSrc={productImage[13]}
+                  imageSrc={productImage[6]}
                 />
                 <ProductCards
                   porositTani={
                     <div>
+                      <p className="price-tag">2,490L</p>
                     <a
                       className="instagram-link"
                       href="https://www.instagram.com/diana_aliaj_style/"
@@ -538,6 +650,7 @@ function Header() {
                 <ProductCards
                   porositTani={
                     <div>
+                      <p className="price-tag">5,990L</p>
                       <a
                         className="instagram-link"
                         href="https://www.instagram.com/diana_aliaj_style/"
@@ -564,6 +677,38 @@ function Header() {
                     </div>
                   }
                   imageSrc={productImage[5]}
+                />
+                <ProductCards
+                  porositTani={
+                    <div>
+                      <p className="price-tag">??</p>
+                      <p>Nuk mund te zgjidhni? Atehere na kontaktoni me poshte per dicka te personalizuar! </p>
+                      <a
+                        className="instagram-link"
+                        href="https://www.instagram.com/diana_aliaj_style/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="instagram"
+                        ></box-icon>
+                      </a>
+                      <br />
+                      <a
+                        className="facebook-link"
+                        href="https://www.facebook.com/aliajdiana/"
+                      >
+                        Porosit tani
+                        <box-icon
+                          className="boxicon"
+                          type="logo"
+                          name="facebook"
+                        ></box-icon>
+                      </a>
+                    </div>
+                  }
+                  imageSrc={productImage[17]}
                 />
               </div>
             </div>

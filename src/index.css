@@ -264,6 +264,14 @@ small {
   border-radius: 8px; /* Add border radius for rounded corners */
 }
 
+.price-tag{
+  margin: 0.3rem;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .grid-images a{
   text-decoration: none;
   border-radius: 0.4rem;

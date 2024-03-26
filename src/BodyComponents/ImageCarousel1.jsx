@@ -6,6 +6,7 @@ import photo4 from '../assets/photo5.jpg'
 import photo5 from '../assets/photo7.jpg'
 import photo6 from '../assets/review1.jpg'
 import photo7 from '../assets/image1.png'
+import photo8 from '../assets/product9.png'
 
 
 
@@ -73,7 +74,7 @@ export default function ImageCarousel() {
         }}
       >
         <img
-          src={images[1]}
+          src={images[4]}
           style={{ width: "220px", height: "17%", margin: "auto", border:'1px solid grey', boxShadow: '3px 3px 15px 2px var(--secondary)', borderRadius: '24px'}}
         />
       </div>
