@@ -16,6 +16,13 @@ import productPhoto3 from "/src/assets/product3.jpg";
 import productPhoto4 from "/src/assets/product4.jpg";
 import productPhoto5 from "/src/assets/product5.jpg";
 import productPhoto6 from "/src/assets/product6.jpg";
+import productPhoto7 from "src/assets/product1.jpeg";
+import productPhoto8 from "src/assets/product2.jpeg";
+import productPhoto9 from "src/assets/product3.jpeg";
+import productPhoto10 from "src/assets/product4.jpeg";
+import productPhoto11 from "src/assets/product5.jpeg";
+import productPhot12 from "src/assets/product6.jpeg";
+
 
 function Header() {
   useEffect(() => {
@@ -122,7 +129,6 @@ function Header() {
         </nav>
       </header>
 
-      <div id="kreu">
         <section id="kreu" className="kreu-section-container">
           <div className="kreu-container">
             <div className="kreu-section-content">
@@ -144,7 +150,6 @@ function Header() {
             </div>
           </div>
         </section>
-      </div>
 
       <br />
         <section id="rreth-nesh">
@@ -177,7 +182,6 @@ function Header() {
             </div>
         </section>
       <br />
-      <div id="produktet-tona">
         <section id="produktet-tona">
           <div className="produktet-tona-container">
             <div className="produktet-tona-contents">
@@ -434,7 +438,6 @@ function Header() {
             </div>
           </div>
         </section>
-      </div>
       <br />
       <div className="na-kontakto">
         <section id="na-kontakto" className="contact-section">
